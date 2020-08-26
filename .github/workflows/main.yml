@@ -12,5 +12,5 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v2  
     - name: Run a one-line script
-      run: epython --version
+      run: python --version
 
