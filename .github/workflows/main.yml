@@ -4,28 +4,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Setup Python
-      uses: actions/setup-python@v2  
-    - name: Run a one-line script
-      run: |
-        python --version
-        pip install requests
-        pip install selenium
-    - name: Start Selenoid Server
-      uses: Xotabu4/selenoid-github-action@v1
-    - uses: actions/checkout@v1
-    - name: Run test
-      env:
-        SELENIUM_HUB_HOST: 'localhost'
-      run: npm cit 
-    - name: Test with pytest
-      run: |
-       python test1.py
+
 jobs:
   build:
 
