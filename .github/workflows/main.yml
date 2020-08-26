@@ -15,6 +15,4 @@ jobs:
       run: python --version
     - name: Test with pytest
       run: |
-        pip install pytest
-        pip install pytest-cov
-        pytest test1.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
+       python test1.py
