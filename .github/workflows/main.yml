@@ -1,0 +1,18 @@
+name: testpython
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2  
+    - name: Run a one-line script
+      run: python --version
+    - name: Test with pytest
+      run: |
+       python test1.py
