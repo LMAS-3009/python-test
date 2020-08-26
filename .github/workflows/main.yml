@@ -27,11 +27,6 @@ jobs:
     - name: Install SeleniumBase
       run: |
         pip install seleniumbase
-    - name: Lint with flake8
-      run: |
-        pip install flake8
-        # Stop the build if there are flake8 issues
-        flake8 . --count --show-source --statistics --exclude=temp
     - name: Install Chrome and Firefox
       run: |
         sudo apt install google-chrome-stable
@@ -42,5 +37,4 @@ jobs:
         seleniumbase install geckodriver
     - name: Make sure pytest is working
       run: |
-        echo "def test_1(): pass" > nothing.py
         pytest test1.py
