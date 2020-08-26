@@ -12,7 +12,9 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v2  
     - name: Run a one-line script
-      run: python --version
+      run: |
+        python --version
+        pip install requests
     - name: Test with pytest
       run: |
        python test1.py
