@@ -177,7 +177,7 @@ def main():
                         first = message.find("{")
                         second = message.find("}")
                         name = message[first+1:second]
-                        sendmessage("We are still working on it...")
+                        amazon(name)
 
                     elif("snapdeal" in message):
                         for i in message.split():
