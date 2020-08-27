@@ -4,7 +4,7 @@ import time
 import os
 import json
 
-url = "https://api.telegram.org/bot1213410968:AAG6TJMmCfBjIVachFE_kKmI98kchXXFSLk/"
+
 def getbotname():
     res = req.get(url+"getMe")
     res = res.json()
